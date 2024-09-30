@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portafolio de Sebastián Alejandro</title>
+</head>
+<body>
+    <header>
+        <img src="cpp-logo.png" alt="Logo C++" class="cpp-logo">
+        <img src="java-logo.png" alt="Logo Java" class="java-logo">
+        <img src="python-logo.png" alt="Logo Python" class="python-logo">
+        <img src="ruby-logo.png" alt="Logo Ruby" class="ruby-logo">
+        <img src="trofeo.png" alt="Trofeo" class="trophy" id="trophy">
+
+        <h1 id="nombre" onclick="showContactForm()">Villarroel Velasco Sebastián Alejandro</h1>
+        <p class="motivational-quote">"La programación es el arte de crear lo que puedas idealizar"</p>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showProjects()">Ver Proyectos</a></li>
+                <li><a href="#" onclick="showAbout()">Más sobre mí</a></li>
+                <li><a href="#" onclick="showSkills()">Habilidades</a></li>
+                <li><a href="#" onclick="toggleDropdown()">Menú</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#" onclick="showContactForm()">Contactar</a></li>
+                        <li><a href="#" onclick="showAbout()">Información sobre mí</a></li>
+                        <li><a href="#">Volver a la página principal</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="projects" style="display: none;">
+            <h2>Proyectos</h2>
+            <img src="imagenes/logo_proyecto.png" alt="Logo del Proyecto" class="project-logo">
+            <p>Aquí irán mis proyectos.</p>
+        </div>
+
+        <div id="about" style="display: none;">
+            <h2>Más sobre mí</h2>
+            <p>Información sobre mí.</p>
+        </div>
+
+        <div id="skills" style="display: none;">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <h3>Lenguajes de programación:</h3>
+                    <p>C++</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%;"></div>
+                    </div>
+                    <p>Java</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 85%;"></div>
+                    </div>
+                    <p>Python</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <p>C#</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                    <p>Haskell</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%;"></div>
+                    </div>
+                    <p>Visual Basic</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                    <p>HTML</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;"></div>
+                    </div>
+                    <p>CSS</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-form" style="display: none;">
+            <h2>Contacto</h2>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        
+        <img src="imagenes/trofeo.png" alt="Trofeo" class="trophy" id="trophy" />
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sebastián Alejandro Villarroel Velasco</p>
+    </footer>
+
+    <script>
+        function showProjects() {
+            hideAll();
+            document.getElementById('projects').style.display = 'block';
+        }
+
+        function showAbout() {
+            hideAll();
+            document.getElementById('about').style.display = 'block';
+        }
+
+        function showSkills() {
+            hideAll();
+            document.getElementById('skills').style.display = 'block';
+            document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showContactForm() {
+            hideAll();
+            document.getElementById('contact-form').style.display = 'block';
+            document.getElementById('trophy').style.display = 'none';
+        }
+
+        function hideAll() {
+            document.getElementById('projects').style.display = 'none';
+            document.getElementById('about').style.display = 'none';
+            document.getElementById('skills').style.display = 'none';
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('trophy').style.display = 'none';
+        }
+
+        function toggleDropdown() {
+            const dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

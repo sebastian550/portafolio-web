@@ -1,0 +1,294 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f7fa;
+  color: #333;
+  overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+.cpp-logo, .java-logo, .python-logo, .ruby-logo {
+  position: absolute;
+  width: 150px; /* Aumentar el tamaño de los logos */
+  filter: blur(2px); /* Desenfoque ligero */
+  z-index: 1;
+}
+
+.cpp-logo {
+  animation: move-cpp 30s infinite linear; /* Más lento */
+}
+
+.java-logo {
+  animation: move-java 35s infinite linear; /* Más lento */
+}
+
+.python-logo {
+  animation: move-python 40s infinite linear; /* Más lento */
+}
+
+.ruby-logo {
+  animation: move-ruby 38s infinite linear; /* Más lento */
+}
+
+@keyframes move-cpp {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(calc(100vw - 150px), 0); }
+  50% { transform: translate(calc(100vw - 150px), calc(100vh - 150px)); }
+  75% { transform: translate(0, calc(100vh - 150px)); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes move-java {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(calc(100vw - 150px), calc(100vh - 150px)); }
+  50% { transform: translate(0, calc(100vh - 150px)); }
+  75% { transform: translate(0, 0); }
+  100% { transform: translate(calc(100vw - 150px), 0); }
+}
+
+@keyframes move-python {
+  0% { transform: translate(calc(100vw - 150px), 0); }
+  25% { transform: translate(calc(100vw - 150px), calc(100vh - 150px)); }
+  50% { transform: translate(0, calc(100vh - 150px)); }
+  75% { transform: translate(0, 0); }
+  100% { transform: translate(calc(100vw - 150px), 0); }
+}
+
+@keyframes move-ruby {
+  0% { transform: translate(calc(100vw - 150px), calc(100vh - 150px)); }
+  25% { transform: translate(0, 0); }
+  50% { transform: translate(calc(100vw - 150px), 0); }
+  75% { transform: translate(0, calc(100vh - 150px)); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Agrega el resto de tu CSS aquí... */
+
+.skills-container {
+  max-height: 400px; /* Altura máxima del contenedor */
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+  margin: 20px auto; /* Centrar el contenedor */
+  padding: 20px; /* Espaciado interno */
+  background-color: #f0f4f4; /* Fondo del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f7fa;
+  color: #333;
+  overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+header {
+  background: rgba(0, 121, 107, 0.9);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive; /* Cambia a una fuente representativa */
+  text-align: center; /* Centrar el texto */
+  font-size: 2.5em; /* Tamaño del texto */
+  margin: 20px 0; /* Espaciado */
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace; /* Fuente representativa de programación */
+  text-align: center; /* Centrar el texto */
+  font-size: 1.5em; /* Tamaño del texto */
+  margin: 10px 0; /* Espaciado */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #c1f0f6;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #b2dfdb; 
+}
+
+.motivational-quote {
+  font-style: italic;
+  color: #c1f0f6; 
+  font-size: 1.2em;
+  text-align: center; /* Centrar la cita */
+}
+
+#skills {
+  margin: 20px auto; /* Espaciado */
+  text-align: center; /* Centrar el texto */
+}
+
+.skill {
+  margin: 10px 0; /* Espaciado entre habilidades */
+}
+
+.progress {
+  background-color: #e0e0e0; /* Fondo de la barra de progreso */
+  border-radius: 25px; /* Bordes redondeados */
+  overflow: hidden; /* Ocultar el exceso */
+  height: 30px; /* Altura de la barra */
+  width: 100%; /* Ancho completo */
+}
+
+.progress-bar {
+  height: 100%; /* Altura completa de la barra */
+  background-color: #00796b; /* Color de la barra de progreso */
+  transition: width 0.5s; /* Animación suave al cambiar el ancho */
+}
+
+#contact-form {
+  text-align: center; /* Centrar el formulario */
+  margin: 20px auto; /* Espaciado */
+}
+
+#contact-form label {
+  display: block; /* Mostrar etiquetas en línea nueva */
+  margin: 10px 0 5px; /* Espaciado */
+}
+
+#contact-form input, 
+#contact-form textarea {
+  width: 300px; /* Ancho del formulario */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+#contact-form button {
+  padding: 10px 20px; /* Espaciado del botón */
+  background-color: #00796b; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambiar cursor */
+}
+
+#contact-form button:hover {
+  background-color: #004d40; /* Cambiar color al pasar el ratón */
+}
+
+.trophy {
+  position: absolute;
+  top: 60%; /* Ajusta según necesites */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Ajustar para centrar correctamente */
+  width: 200px; /* Aumentar el tamaño del trofeo */
+  display: none; /* Oculto por defecto */
+  z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Para que esté detrás del contenido */
+}
+
+.cpp-logo, .java-logo, .python-logo, .ruby-logo {
+  position: absolute;
+  width: 150px; /* Aumentar el tamaño de los logos */
+  filter: blur(2px); /* Desenfoque ligero */
+  z-index: 1;
+}
+
+.cpp-logo {
+  animation: move-cpp 20s infinite linear; /* Lento */
+}
+
+.java-logo {
+  animation: move-java 25s infinite linear; /* Lento */
+}
+
+.python-logo {
+  animation: move-python 30s infinite linear; /* Lento */
+}
+
+.ruby-logo {
+  animation: move-ruby 28s infinite linear; /* Lento */
+}
+
+@keyframes move-cpp {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(calc(100vw - 150px), 0); }
+  50% { transform: translate(calc(100vw - 150px), calc(100vh - 150px)); }
+  75% { transform: translate(0, calc(100vh - 150px)); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes move-java {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(calc(100vw - 150px), calc(100vh - 150px)); }
+  50% { transform: translate(0, calc(100vh - 150px)); }
+  75% { transform: translate(0, 0); }
+  100% { transform: translate(calc(100vw - 150px), 0); }
+}
+
+@keyframes move-python {
+  0% { transform: translate(calc(100vw - 150px), 0); }
+  25% { transform: translate(calc(100vw - 150px), calc(100vh - 150px)); }
+  50% { transform: translate(0, calc(100vh - 150px)); }
+  75% { transform: translate(0, 0); }
+  100% { transform: translate(calc(100vw - 150px), 0); }
+}
+
+@keyframes move-ruby {
+  0% { transform: translate(calc(100vw - 150px), calc(100vh - 150px)); }
+  25% { transform: translate(0, 0); }
+  50% { transform: translate(calc(100vw - 150px), 0); }
+  75% { transform: translate(0, calc(100vh - 150px)); }
+  100% { transform: translate(0, 0); }
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: rgba(0, 121, 107, 0.9);
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
